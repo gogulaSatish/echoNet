@@ -7,11 +7,17 @@ import Comment from "../../Img/comment.png";
 import TrendCard from "../TrendCard/TrendCard";
 import ShareModal from "../ShareModal/ShareModal";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { logOut } from "../../actions/AuthAction";
 
 const RightSide = () => {
   const [modalOpened, setModalOpened] = useState(false);
   const { user } = useSelector((state) => state.authReducer.authData);
+  const dispatch = useDispatch();
+
+  const handleLogOut = () => {
+    dispatch(logOut());
+  };
 
   return (
     <div className="RightSide">
@@ -24,7 +30,14 @@ const RightSide = () => {
           <SettingsOutlinedIcon />
         </Link>
         <img src={Noti} alt="" />
-        <img src={Comment} alt="" />
+        {/* <img src={Comment} alt="" /> */}
+        <button
+          className="button"
+          style={{ width: "7rem", height: "2rem" }}
+          onClick={handleLogOut}
+        >
+          Log Out
+        </button>
       </div>
 
       <TrendCard />
