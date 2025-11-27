@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Post.css";
 import Comment from "../../Img/comment.png";
 import Share from "../../Img/share.png";
@@ -6,12 +6,26 @@ import Like from "../../Img/like.png";
 import Notlike from "../../Img/notlike.png";
 import { useSelector } from "react-redux";
 import { likePost } from "../../api/PostRequest";
+import { getAllUser } from "../../api/UserRequest";
 
 const Post = ({ data }) => {
   const { user } = useSelector((state) => state.authReducer.authData);
   const [liked, setLiked] = useState(data.likes.includes(user._id));
   const [likes, setLikes] = useState(data.likes.length);
 
+  const [persons, setPersons] = useState([]);
+  const [allUsers, setAllUsers] = useState([]);
+  useEffect(() => {
+    const fetchPersons = async () => {
+      const { data } = await getAllUser();
+      setAllUsers(data);
+
+      // setPersons(allUsers);
+    };
+    fetchPersons();
+  }, []);
+
+  const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
   const handleLike = () => {
     setLiked((prev) => !prev);
     likePost(data._id, user._id);
@@ -36,6 +50,18 @@ const Post = ({ data }) => {
         <span>{data.desc}</span>
       </div>
       <div className="postReact">
+        <img
+          src={
+            allUsers.find((singleUser) => singleUser._id === data.userId)
+              ? `${serverPublic}/images/${
+                  allUsers.find((singleUser) => singleUser._id === data.userId)
+                    .profilePicture
+                }`
+              : `${serverPublic}/images/defaultProfile.png`
+          }
+          style={{ width: "28px", height: "28px", borderRadius: "28px" }}
+          alt="Profile"
+        />
         <img
           src={liked ? Like : Notlike}
           alt=""
