@@ -34,7 +34,6 @@ const RightSide = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {" "}
           <img src={Noti} alt="" />
         </a>
         {/* <img src={Comment} alt="" /> */}
