@@ -1,4 +1,4 @@
-# Social Media Web App
+# Social Media Web App- Echo Net
 
 This project is a full-stack social media web application 🌐 that has been developed using the **MERN stack 🖥️** and **Rest API 🚀**, In this social media platform where you can share posts, like/unlike posts, Follow/Unfollow users and more.
 
@@ -41,7 +41,8 @@ This project is a full-stack social media web application 🌐 that has been dev
 
 ### **Dummy/Test Account details:**
 
-email: ravi.kumar@dummymail.com
+email: ravi.kumar@dummymail.com, 
+
 password: password123
 
 #### **How to run this application**
