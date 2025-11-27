@@ -80,15 +80,11 @@ const PostShare = () => {
 
   return (
     <div className="PostShare">
-      {console.log(
-        "profile pic: ",
-        ` ${serverPublic}/images/${user.profilePicture}`
-      )}
       <img
         src={
           user.profilePicture
             ? ` ${serverPublic}/images/${user.profilePicture}`
-            : serverPublic + "/defaultProfile.png"
+            : serverPublic + "/images/defaultProfile.png"
         }
         alt="Profile"
       />

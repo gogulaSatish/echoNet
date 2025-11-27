@@ -20,9 +20,6 @@ const Post = ({ data }) => {
 
   return (
     <div className="Post">
-      {console.log(
-        `${process.env.REACT_APP_PUBLIC_FOLDER}/images/${data.image}`
-      )}
       <img
         src={
           data.image

@@ -5,15 +5,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { logIn, signUp } from "../../actions/AuthAction.js";
 
 const Auth = () => {
-  const [isSignUp, setIsSignUp] = useState(true);
+  const [isSignUp, setIsSignUp] = useState(false);
   const dispatch = useDispatch();
   const loading = useSelector((state) => state.authReducer.loading);
 
   const [data, setData] = useState({
     firstname: "",
     lastname: "",
-    email: "",
-    password: "",
+    email: "ravi.kumar@dummymail.com",
+    password: "password123",
     confirmpass: "",
   });
 
