@@ -39,6 +39,11 @@ This project is a full-stack social media web application 🌐 that has been dev
 - MongoDB or MongoDB Atlas
 - Install Vs Code
 
+### **Dummy/Test Account details:**
+
+email: ravi.kumar@dummymail.com
+password: password123
+
 #### **How to run this application**
 
 - Make sure MongoDB is running on your system or online.
