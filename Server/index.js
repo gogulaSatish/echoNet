@@ -25,7 +25,14 @@ app.use("/images", express.static(path.join(__dirname, "public/images")));
 // Middleware
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
-app.use(cors());
+app.use(
+  cors({
+    origin: process.env.ORIGIN,
+    credentials: true,
+    exposedHeaders: ["X-Total-Count"],
+    methods: ["GET", "POST", "PATCH", "DELETE"],
+  })
+);
 
 // Load environment variables from .env file
 dotenv.config();
