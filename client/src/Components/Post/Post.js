@@ -25,7 +25,7 @@ const Post = ({ data }) => {
     fetchPersons();
   }, []);
 
-  const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
+  const serverPublic = process.env.REACT_APP_API_URL;
   const handleLike = () => {
     setLiked((prev) => !prev);
     likePost(data._id, user._id);
@@ -37,7 +37,7 @@ const Post = ({ data }) => {
       <img
         src={
           data.image
-            ? `${process.env.REACT_APP_PUBLIC_FOLDER}/images/${data.image}`
+            ? `${process.env.REACT_APP_API_URL}/images/${data.image}`
             : " "
         }
         alt=""

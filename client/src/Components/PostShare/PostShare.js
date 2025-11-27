@@ -18,7 +18,7 @@ const PostShare = () => {
   const { user } = useSelector((state) => state.authReducer.authData);
 
   // Make sure serverPublic is correctly set
-  const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
+  const serverPublic = process.env.REACT_APP_API_URL;
 
   // Image selection handler
   const onImageChange = (event) => {

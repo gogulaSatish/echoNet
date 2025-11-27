@@ -9,7 +9,7 @@ const UserFollow = ({ person }) => {
     person.followers.includes(user._id)
   );
 
-  const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
+  const serverPublic = process.env.REACT_APP_API_URL;
 
   const handleFollow = () => {
     following

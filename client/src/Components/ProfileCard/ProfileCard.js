@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const ProfileCard = ({ location }) => {
   const { user } = useSelector((state) => state.authReducer.authData);
   const posts = useSelector((state) => state.postReducer.posts);
-  const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
+  const serverPublic = process.env.REACT_APP_API_URL;
 
   return (
     <div className="ProfileCard">
