@@ -1,6 +1,28 @@
-.Home{
-    position: relative;
-    display: grid;
-    grid-template-columns: 18rem auto 20rem;   
-    gap: 1rem;
+.Home {
+  position: relative;
+  display: grid;
+  grid-template-columns: 18rem auto 20rem;
+  gap: 1rem;
+}
+
+/* Tablet view - hide right sidebar */
+@media (max-width: 1200px) {
+  .Home {
+    grid-template-columns: 18rem auto;
+  }
+}
+
+/* Tablet view - hide left sidebar */
+@media (max-width: 900px) {
+  .Home {
+    grid-template-columns: auto;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .Home {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
 }

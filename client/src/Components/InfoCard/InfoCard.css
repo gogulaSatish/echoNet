@@ -1,26 +1,44 @@
-.InfoCard{
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    background-color: var(--cardColor);
-    padding: 1rem;
-    border-radius: 1rem;
-    width: 90%;
+.InfoCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: var(--cardColor);
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 100%;
 }
 
-.infoHead{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.infoHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.infoHead > div:hover{
-    cursor: pointer;
+.infoHead > div:hover {
+  cursor: pointer;
 }
 
-.logout-button{
-    width: 7rem;
-    height: 2rem;
-    margin-top: 6rem;
-    align-self: flex-end;
+.logout-button {
+  width: 7rem;
+  height: 2rem;
+  margin-top: 6rem;
+  align-self: flex-end;
+}
+
+@media (max-width: 480px) {
+  .InfoCard {
+    width: 95%;
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .logout-button {
+    width: 6rem;
+    height: 1.8rem;
+    margin-top: 3rem;
+    font-size: 0.8rem;
+  }
 }

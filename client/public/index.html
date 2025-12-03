@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicons.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"
+    />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
@@ -22,13 +25,24 @@
     />
 
     <style>
-      *{
+      * {
         margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-      body{
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
         font-family: "Inter Tight", sans-serif;
         font-family: "Noto Sans", sans-serif;
-        font-family: "Poppins", sans-serif;     
+        font-family: "Poppins", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      #root {
+        display: flex;
+        width: 100%;
       }
     </style>
 

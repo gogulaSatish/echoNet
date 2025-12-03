@@ -1,28 +1,50 @@
-.RightSide{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+.RightSide {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
 }
 
-.navIcons{
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
+.navIcons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .navIcons > img {
-    width: 1.5rem;
-    height: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
 }
 
 .navIcons > a > img {
-    width: 2rem;
-    height: 2rem;
+  width: 2rem;
+  height: 2rem;
 }
 
-.rg-button{
-    height: 3rem;
-    width: 80%;
-    align-self: center;
+.rg-button {
+  height: 3rem;
+  width: 80%;
+  align-self: center;
+  min-width: 150px;
 }
 
+@media (max-width: 480px) {
+  .RightSide {
+    gap: 1rem;
+  }
+
+  .navIcons {
+    margin-top: 0.5rem;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .rg-button {
+    width: 90%;
+    height: 2.5rem;
+    font-size: 0.9rem;
+  }
+}

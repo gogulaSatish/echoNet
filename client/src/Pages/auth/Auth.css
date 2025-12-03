@@ -1,68 +1,140 @@
-.Auth{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    gap: 4rem;
-    position: relative;  
+.Auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 4rem;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 1rem;
 }
 
-.Auth > div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.Auth > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .a-left {
-    gap: 2rem;
+  gap: 2rem;
+  flex-direction: column;
+  min-width: 300px;
 }
 
-.a-left > img{
-    width: 4rem;
-    height: 4rem;
+.a-left > img {
+  width: 4rem;
+  height: 4rem;
 }
 
 .Webname > h2 {
-    color: rgb(43, 43, 163);
+  color: rgb(43, 43, 163);
+  font-size: 1.5rem;
 }
 
 .infoForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.infoInput {
+  border: none;
+  outline: none;
+  background-color: var(--inputColor);
+  border-radius: 8px;
+  padding: 17px;
+  flex: 1;
+  font-size: 16px;
+  min-width: 200px;
+}
+
+.infoForm > div {
+  display: flex;
+  gap: 1rem;
+  height: 2rem;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.infoButton {
+  width: 6rem;
+  height: 2rem;
+  align-items: center;
+}
+
+.authForm {
+  background-color: var(--cardColor);
+  border-radius: 1rem;
+  padding: 1rem;
+  min-width: 300px;
+}
+
+.authForm > div {
+  width: 100%;
+  align-items: center;
+}
+
+/* Tablet view */
+@media (max-width: 900px) {
+  .Auth {
+    height: auto;
     gap: 2rem;
-}
+    min-height: 100vh;
+  }
 
-.infoInput{
-    border: none;
-    outline: none;
-    background-color: var(--inputColor);
-    border-radius: 8px;
-    padding: 17px;
-    flex: 1;
-}
-
-.infoForm > div{
-    display: flex;  
-    gap: 1rem;
-    height: 2rem;
-    width: 90%;
-}
-
-.infoButton{
-    width: 6rem;
-    height: 2rem;
-    align-items: center;
-}
-
-.authForm{
-    background-color: var(--cardColor);
-    border-radius: 1rem;
-    padding: 1rem;
-}
-
-.authForm > div{
+  .Auth > div {
     width: 100%;
-    align-items: center;
+  }
+
+  .a-left {
+    min-width: 250px;
+    gap: 1.5rem;
+  }
+
+  .Webname > h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .Auth {
+    gap: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .a-left {
+    display: none;
+  }
+
+  .infoForm {
+    gap: 1.5rem;
+  }
+
+  .infoForm > div {
+    width: 95%;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .infoInput {
+    padding: 12px;
+    width: 100%;
+  }
+
+  .infoButton {
+    width: 100%;
+    height: 2.5rem;
+  }
+
+  .authForm {
+    min-width: 95%;
+    padding: 0.75rem;
+  }
+
+  .authForm > div {
+    flex-direction: column;
+  }
 }

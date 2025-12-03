@@ -1,42 +1,81 @@
-.FollowersCard{
-    width: 100%;
-    border-radius: 0.7rem;
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    font-size: 15px;
+.FollowersCard {
+  width: 100%;
+  border-radius: 0.7rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
 }
 
-.follower{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.follower {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
-.follower > div{
-    display: flex;
-    gap: 10px;
+.follower > div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
-.followerImg{
-    width: 3.2rem;
-    height: 3.2rem;
-    border-radius: 50%;
+.followerImg {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
-.name{
-    display: flex;
-    flex-direction: column;
-    align-items: self-start;
-    justify-content: center;
+.name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 100px;
 }
 
-.name > span:nth-of-type(1){
-    font-weight: bold;
+.name > span:nth-of-type(1) {
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
-.fc-button{
-    height: 2rem;
-    padding-left: 15px;
-    padding-right: 15px;
+.name > span:nth-of-type(2) {
+  font-size: 0.8rem;
+}
+
+.fc-button {
+  height: 2rem;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .FollowersCard {
+    gap: 0.75rem;
+    font-size: 13px;
+  }
+
+  .follower {
+    gap: 0.5rem;
+  }
+
+  .followerImg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .name {
+    min-width: 80px;
+  }
+
+  .fc-button {
+    height: 1.7rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 0.75rem;
+  }
 }

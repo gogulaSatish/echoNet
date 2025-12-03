@@ -1,75 +1,123 @@
-.PostShare{
-    display: flex;
-    gap: 1rem;
-    background-color: var(--cardColor);
-    padding: 1rem;
-    border-radius: 1rem;
+.PostShare {
+  display: flex;
+  gap: 1rem;
+  background-color: var(--cardColor);
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 100%;
 }
 
-.PostShare > img{
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
+.PostShare > img {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
 }
 
-.PostShare > div{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    gap: 1rem;
+.PostShare > div {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: 1rem;
 }
 
 .PostShare > div > input {
-    background-color: var(--inputColor);
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 17px;
-    border: none;
-    outline: none;
+  background-color: var(--inputColor);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  width: 100%;
 }
 
-.postOptions{
-    display: flex;
-    justify-content: space-around;
+.postOptions {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.option{
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.option {
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.option:hover {
+  cursor: pointer;
+}
+
+.ps-button {
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 15px;
+  align-self: flex-end;
+}
+
+.previewImage {
+  position: relative;
+  width: 100%;
+}
+
+.previewImage > svg {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.previewImage > img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .PostShare {
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .PostShare > img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .PostShare > div > input {
     font-size: 14px;
-}
+    padding: 8px;
+  }
 
-.option:hover{
-    cursor: pointer;
-}
+  .postOptions {
+    font-size: 12px;
+  }
 
-.ps-button{
-    padding: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 15px;
-}
+  .option {
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 12px;
+  }
 
+  .ps-button {
+    padding: 4px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 13px;
+    height: 2rem;
+  }
 
-.previewImage{
-    position: relative;
-}
-
-.previewImage > svg{
-    position: absolute;
-    right: 1rem;
-    top: 0.5rem;
-    cursor: pointer;
-}
-
-.previewImage > img{
-    width: 100%;
-    height: 20rem;
-    object-fit: cover;
-    border-radius: 0.5rem;
+  .previewImage > img {
+    height: 15rem;
+  }
 }

@@ -11,21 +11,45 @@
   --cardColor: rgba(255, 255, 255, 0.64);
   --buttonBg: linear-gradient(98.63deg, #6674cc 10%, #9615db 100%);
   --inputColor: rgba(40, 52, 62, 0.07);
-  --photo: #4CB256;
-  --video: #4A4EB7;
-  --location: #EF5757;
---shedule: #E1AE4A;
+  --photo: #4cb256;
+  --video: #4a4eb7;
+  --location: #ef5757;
+  --shedule: #e1ae4a;
 }
-
 
 .App {
   overflow: hidden;
   color: var(--black);
   background: #f3f3f3;
   padding: 1rem 1rem;
+  min-height: 100vh;
 }
 
-.blur{
+/* Responsive design - Mobile First */
+@media (max-width: 480px) {
+  .App {
+    padding: 0.5rem 0.5rem;
+    overflow-x: hidden;
+  }
+
+  .blur {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 0.75rem 0.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .App {
+    padding: 1rem 1rem;
+  }
+}
+
+.blur {
   position: absolute;
   width: 22rem;
   height: 14rem;
@@ -34,7 +58,7 @@
   filter: blur(72px);
 }
 
-.button{
+.button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,21 +67,30 @@
   border: none;
   border-radius: 0.5rem;
   transition: all 100ms ease-out;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
 }
 
-.button:hover{
+.button:hover {
   cursor: pointer;
   background: transparent;
   color: var(--purplePain);
   border: 2px solid var(--purplePain);
 }
 
-
-.button:disabled{
+.button:disabled {
   background: silver;
   pointer-events: none;
 }
 
 ::-webkit-scrollbar {
-  display: none; 
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
 }
