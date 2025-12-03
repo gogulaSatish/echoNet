@@ -1,8 +1,9 @@
 .Profile {
   position: relative;
   display: grid;
-  grid-template-columns: 18rem auto 20rem;
+  grid-template-columns: 18rem 1fr 20rem;
   gap: 1rem;
+  width: 100%;
 }
 
 .ProfilePage-Center {
@@ -14,7 +15,7 @@
 /* Tablet view - hide right sidebar */
 @media (max-width: 1200px) {
   .Profile {
-    grid-template-columns: 18rem auto;
+    grid-template-columns: 18rem 1fr;
   }
 }
 
